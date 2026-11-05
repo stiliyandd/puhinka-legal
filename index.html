@@ -3,143 +3,124 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Пухинка — Политика за поверителност / Privacy Policy</title>
+<title>Пухинка — таймер за кърмене и бебешки дневник</title>
+<meta name="description" content="Пухинка: таймер за кърмене и бебешки дневник за Android. Без акаунти, без сървъри, без реклами — всичко остава на твоя телефон.">
+<meta property="og:title" content="Пухинка — таймер за кърмене и бебешки дневник">
+<meta property="og:description" content="Без акаунти, без сървъри, без реклами — всичко остава на твоя телефон.">
+<meta property="og:image" content="logo.png">
+<link rel="icon" href="logo.png">
 <style>
-  body { font-family: -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 720px;
-         margin: 0 auto; padding: 24px 20px 60px; line-height: 1.65; color: #3A1B2A; background: #FBF4F6; }
-  h1 { font-size: 26px; } h2 { font-size: 19px; margin-top: 32px; color: #9C2C63; }
-  .en { border-top: 2px solid #E8D3DE; margin-top: 48px; padding-top: 8px; }
-  .updated { color: #96707F; font-size: 14px; }
-  a { color: #9C2C63; }
-  .logo { display: block; width: 96px; height: 96px; border-radius: 22px; margin: 8px 0 4px; }
+  :root { --bg:#FBF4F6; --card:#fff; --text:#3A1B2A; --muted:#7A5565; --brand:#9C2C63; --soft:#F3E3EA; --line:#E8D3DE; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#1E1218; --card:#2A1A23; --text:#F6E9EF; --muted:#C9A9B8; --brand:#E889B5; --soft:#3A2330; --line:#4A3040; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:-apple-system,"Segoe UI",Roboto,sans-serif; line-height:1.6; color:var(--text); background:var(--bg); }
+  .wrap { max-width:880px; margin:0 auto; padding:0 20px; }
+  header { display:flex; justify-content:flex-end; padding-top:16px; }
+  .lang button { border:1px solid var(--line); background:var(--card); color:var(--text); padding:6px 14px; font:inherit; font-size:14px; cursor:pointer; }
+  .lang button:first-child { border-radius:999px 0 0 999px; } .lang button:last-child { border-radius:0 999px 999px 0; border-left:0; }
+  .lang button[aria-pressed="true"] { background:var(--brand); color:#fff; border-color:var(--brand); }
+  .hero { text-align:center; padding:28px 0 40px; }
+  .hero img { width:132px; height:132px; border-radius:30px; box-shadow:0 8px 28px rgba(156,44,99,.25); }
+  h1 { font-size:clamp(30px,6vw,44px); line-height:1.15; margin:20px 0 10px; }
+  .lead { font-size:clamp(17px,3vw,20px); color:var(--muted); max-width:620px; margin:0 auto; }
+  .badge { display:inline-block; margin-top:24px; padding:12px 22px; border-radius:999px; background:var(--brand); color:#fff; font-weight:700; }
+  .promises { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:14px; margin:8px 0 8px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:20px; padding:18px 20px; }
+  .card h3 { margin:0 0 6px; font-size:18px; color:var(--brand); }
+  .card p { margin:0; color:var(--muted); font-size:15px; }
+  h2 { font-size:26px; margin:48px 0 16px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:14px; }
+  .ico { font-size:26px; display:block; margin-bottom:4px; }
+  .plans { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:14px; }
+  .plans ul { margin:8px 0 0; padding-left:20px; color:var(--muted); font-size:15px; }
+  .note { background:var(--soft); border-radius:16px; padding:14px 18px; color:var(--muted); font-size:14px; margin-top:28px; }
+  footer { margin:56px 0 0; padding:24px 0 48px; border-top:1px solid var(--line); text-align:center; color:var(--muted); font-size:14px; }
+  footer a { color:var(--brand); margin:0 10px; }
+  a { color:var(--brand); }
+  html[data-lang="bg"] body [lang="en"] { display:none; }
+  html[data-lang="en"] body [lang="bg"] { display:none; }
 </style>
 </head>
 <body>
-<img class="logo" src="logo.png" alt="Пухинка">
-<h1>Пухинка — Политика за поверителност</h1>
-<p class="updated">Последна актуализация: 5 ноември 2026 г. · <a href="terms.html">Условия за ползване</a></p>
+<div class="wrap">
+  <header>
+    <div class="lang" role="group" aria-label="Език / Language">
+      <button type="button" data-set="bg" aria-pressed="true">BG</button><button type="button" data-set="en" aria-pressed="false">EN</button>
+    </div>
+  </header>
 
-<h2>Накратко</h2>
-<p><strong>Пухинка не събира, не съхранява и не предава никакви лични данни.</strong>
-Всички записи, които въвеждате (хранения, сън, растеж, здравни бележки и др.), се
-съхраняват единствено в паметта на вашето устройство и никога не напускат телефона,
-освен ако вие сами не ги изнесете чрез функцията за експорт.</p>
+  <section class="hero">
+    <img src="logo.png" alt="Пухинка">
+    <h1 lang="bg">Пухинка</h1><h1 lang="en">Puhinka</h1>
+    <p class="lead" lang="bg">Таймер за кърмене и бебешки дневник, правен за 2 през нощта. Всичко остава на твоя телефон.</p>
+    <p class="lead" lang="en">A breastfeeding timer and baby journal made for 2 a.m. Everything stays on your phone.</p>
+    <span class="badge" lang="bg">Скоро в Google Play</span><span class="badge" lang="en">Coming soon to Google Play</span>
+  </section>
 
-<h2>Какви данни обработва приложението</h2>
-<p>Приложението работи с данни, които вие въвеждате доброволно: записи за хранене,
-сън, памперси, растеж, лекарства, ваксини и подобни, както и незадължителни име и
-дата на раждане на детето. Тези данни се съхраняват само локално на устройството.
-Ние (разработчикът) нямаме достъп до тях и не можем да ги видим.</p>
+  <section class="promises" lang="bg">
+    <div class="card"><h3>🔒 Без акаунти</h3><p>Не се регистрираш. Записите ти живеят само на телефона и никъде не се изпращат.</p></div>
+    <div class="card"><h3>📴 Без сървъри</h3><p>Работи изцяло офлайн — и в 3 през нощта без обхват.</p></div>
+    <div class="card"><h3>🚫 Без реклами</h3><p>Никакви реклами, проследяване и аналитики на трети страни.</p></div>
+  </section>
+  <section class="promises" lang="en">
+    <div class="card"><h3>🔒 No accounts</h3><p>No sign-up. Your records live only on your phone and are never sent anywhere.</p></div>
+    <div class="card"><h3>📴 No servers</h3><p>Works fully offline — even at 3 a.m. with no signal.</p></div>
+    <div class="card"><h3>🚫 No ads</h3><p>No ads, no tracking, no third-party analytics.</p></div>
+  </section>
 
-<h2>Какво НЕ правим</h2>
-<ul>
-  <li>Няма регистрация и няма акаунти.</li>
-  <li>Няма сървъри — приложението работи изцяло офлайн.</li>
-  <li>Няма реклами и няма рекламни идентификатори.</li>
-  <li>Няма аналитични или проследяващи инструменти на трети страни.</li>
-  <li>Не продаваме и не споделяме данни — няма какво да споделим.</li>
-</ul>
+  <h2 lang="bg">Какво има вътре</h2><h2 lang="en">What's inside</h2>
+  <section class="grid" lang="bg">
+    <div class="card"><span class="ico">🤱</span><h3>Кърмене</h3><p>Таймери за лява и дясна гърда с едно докосване, подсказка коя е наред, бутилка и цедене, напомняния със сила на будилник и widget за началния екран.</p></div>
+    <div class="card"><span class="ico">🌙</span><h3>Ежедневието</h3><p>Сън, памперси, време по корем, захранване с проверен списък първи храни и алергени, дневен чеклист „Режим“.</p></div>
+    <div class="card"><span class="ico">📈</span><h3>Развитие</h3><p>Растеж върху кривите на СЗО, етапи, карта на млечните зъбчета, календар на скоковете в растежа, статии седмица по седмица.</p></div>
+    <div class="card"><span class="ico">💉</span><h3>Здраве</h3><p>Българският имунизационен календар с напомняния, лекарства, прегледи с „въпроси за лекаря“, дневник на температурата.</p></div>
+    <div class="card"><span class="ico">🤰</span><h3>Бременност</h3><p>Термин и седмица, таймер за контракции, брояч на ритници, чанта за родилния дом.</p></div>
+    <div class="card"><span class="ico">🧸</span><h3>Мечо</h3><p>Офлайн помощник, който отговаря от твоите записи: „кога яде последно?“, „резюме за днес“.</p></div>
+  </section>
+  <section class="grid" lang="en">
+    <div class="card"><span class="ico">🤱</span><h3>Nursing</h3><p>One-tap left/right timers, a hint for which side is next, bottle and pumping, alarm-volume reminders and a home-screen widget.</p></div>
+    <div class="card"><span class="ico">🌙</span><h3>Daily life</h3><p>Sleep, diapers, tummy time, solids with a verified first-foods list and allergens, a daily “Routine” checklist.</p></div>
+    <div class="card"><span class="ico">📈</span><h3>Development</h3><p>Growth on the WHO curves, milestones, a map of the baby teeth, a growth-spurt calendar, week-by-week articles.</p></div>
+    <div class="card"><span class="ico">💉</span><h3>Health</h3><p>The Bulgarian vaccination schedule with reminders, medicines, doctor visits with “questions for the doctor”, a temperature log.</p></div>
+    <div class="card"><span class="ico">🤰</span><h3>Pregnancy</h3><p>Due date and week, a contraction timer, a kick counter, a hospital bag list.</p></div>
+    <div class="card"><span class="ico">🧸</span><h3>Mecho</h3><p>An offline helper that answers from your own records: “when did she last eat?”, “today's summary”.</p></div>
+  </section>
 
-<h2>Експорт и споделяне</h2>
-<p>Функциите за експорт (CSV/JSON файлове, PDF отчет) създават файл на вашето
-устройство, който вие сами решавате дали и с кого да споделите чрез системния
-диалог за споделяне. Автоматичното копие записва файл само в папка, която вие сте
-избрали на устройството; сливането на копие от партньор чете файл, който вие сте
-отворили. Бутонът за обратна връзка отваря вашето имейл приложение —
-изпращането на съобщението е изцяло по ваша преценка.</p>
+  <h2 lang="bg">Безплатно и Premium</h2><h2 lang="en">Free and Premium</h2>
+  <section class="plans" lang="bg">
+    <div class="card"><h3>Безплатно завинаги</h3><ul><li>Таймери за кърмене, дневник и ръчни записи</li><li>Бутилка, цедене, сън, памперси, температура</li><li>Статистика за последните 7 дни</li><li>Експорт и импорт на данните, автоматично копие, widget</li><li>Контракции, ритници, чанта за родилния дом</li></ul></div>
+    <div class="card"><h3>Premium</h3><ul><li>Месечен или годишен абонамент (със 7 дни безплатно, ако е наличен) или еднократно „завинаги“</li><li>Статистика над 7 дни, растеж с криви на СЗО, зъби, ваксини, прегледи</li><li>Лекарства, запас кърма, режим, скокове, статии, помощникът Мечо</li><li>PDF отчет за педиатъра и няколко деца</li></ul></div>
+  </section>
+  <section class="plans" lang="en">
+    <div class="card"><h3>Free forever</h3><ul><li>Nursing timers, journal and manual entries</li><li>Bottle, pumping, sleep, diapers, temperature</li><li>Last-7-days statistics</li><li>Data export and import, automatic backup, widget</li><li>Contractions, kicks, hospital bag</li></ul></div>
+    <div class="card"><h3>Premium</h3><ul><li>Monthly or yearly subscription (7 days free when available) or a one-time “lifetime” purchase</li><li>Statistics beyond 7 days, growth with WHO curves, teeth, vaccines, doctor visits</li><li>Medicines, milk stash, routine, spurts, articles, the Mecho assistant</li><li>Pediatrician PDF report and multiple children</li></ul></div>
+  </section>
 
-<h2>Известия</h2>
-<p>Напомнянията (за хранене, ваксини, прегледи и др.) са локални известия,
-генерирани на самото устройство. Не се използват push услуги през интернет.</p>
+  <p class="note" lang="bg">Пухинка е дневник и ориентир, не е медицинско изделие и не замества лекар. Здравното съдържание стъпва на проверени източници: СЗО, CDC, AAP, NHS, НЦОЗА и българските наредби.</p>
+  <p class="note" lang="en">Puhinka is a journal and a guide, not a medical device, and does not replace a doctor. Health content relies on verified sources: WHO, CDC, AAP, NHS, the Bulgarian National Centre of Public Health and Bulgarian regulations.</p>
 
-<h2>Плащания</h2>
-<p>Основните функции са безплатни. Допълнителните (Premium) се купуват в
-приложението чрез Google Play: месечен или годишен абонамент или еднократна покупка
-„завинаги“. Плащането, картата и сметката ви се обработват изцяло от Google Play
-Billing съгласно <a href="https://policies.google.com/privacy">политиката за
-поверителност на Google</a>. Ние не получаваме и не съхраняваме данни за картата
-ви.</p>
-<p>За да провери дали имате Premium, приложението пита услугата Google Play на
-самия телефон. Резултатът се пази само на устройството, без наш сървър.
-Информацията за поръчките, която Google предоставя на разработчиците в Play
-Console, ползваме само за счетоводство и за въпроси по поръчки и възстановяване на
-суми. Абонаментът се управлява и спира от Google Play → Плащания и абонаменти.</p>
-
-<h2>Изтриване на данните</h2>
-<p>Данните се изтриват чрез изтриване на приложението или „Изчистване на данните"
-от настройките на Android. Тъй като данните съществуват само на вашето устройство,
-никой друг не съхранява копие.</p>
-
-<h2>Деца</h2>
-<p>Приложението е предназначено за родители и настойници, не за самостоятелна
-употреба от деца.</p>
-
-<h2>Медицинска бележка</h2>
-<p>Пухинка е дневник и ориентир. То не е медицинско изделие и не предоставя
-медицински съвети; решенията за здравето на детето принадлежат на родителите и
-лекуващия лекар.</p>
-
-<h2>Контакт</h2>
-<p>Въпроси относно поверителността: <a href="mailto:puhinka.app@gmail.com">puhinka.app@gmail.com</a></p>
-
-<div class="en" lang="en">
-<h1>Puhinka — Privacy Policy (English)</h1>
-<p class="updated">Last updated: November 5, 2026 · <a href="terms.html#en">Terms of Use</a></p>
-
-<h2>In short</h2>
-<p><strong>Puhinka does not collect, store, or transmit any personal data.</strong>
-Everything you enter (feedings, sleep, growth, health notes, etc.) is stored only in
-your device's local storage and never leaves your phone unless you export it yourself.</p>
-
-<h2>What the app processes</h2>
-<p>The app works with data you enter voluntarily: feeding, sleep, diaper, growth,
-medicine and vaccine records, plus an optional child name and birth date — all stored
-locally on the device. We (the developer) have no access to it.</p>
-
-<h2>What we do NOT do</h2>
-<ul>
-  <li>No registration and no accounts.</li>
-  <li>No servers — the app works fully offline.</li>
-  <li>No ads and no advertising identifiers.</li>
-  <li>No third-party analytics or tracking.</li>
-  <li>No selling or sharing of data — there is nothing to share.</li>
-</ul>
-
-<h2>Export &amp; sharing</h2>
-<p>Export features (CSV/JSON, PDF report) create a file on your device that you choose
-whether and with whom to share via the system share dialog. The automatic backup writes
-a file only to a folder you chose on the device; merging a partner's backup reads a file
-you opened. The feedback button opens your own email app.</p>
-
-<h2>Notifications</h2>
-<p>All reminders are local notifications generated on the device itself; no internet
-push services are used.</p>
-
-<h2>Payments</h2>
-<p>The core features are free. Extra (Premium) features are bought in the app through
-Google Play: a monthly or yearly subscription, or a one-time “lifetime” purchase. Payment,
-your card and your account are handled entirely by Google Play Billing under
-<a href="https://policies.google.com/privacy">Google's privacy policy</a>. We never
-receive or store your card details.</p>
-<p>To check whether you have Premium, the app asks the Google Play service on the phone
-itself. The result is kept only on the device, with no server of ours. The order
-information Google gives developers in Play Console is used only for accounting and for
-questions about orders and refunds. Subscriptions are managed and cancelled in Google
-Play → Payments &amp; subscriptions.</p>
-
-<h2>Data deletion</h2>
-<p>Delete the app or use Android's "Clear data" — since data exists only on your
-device, no one else holds a copy.</p>
-
-<h2>Children</h2>
-<p>The app is intended for parents and guardians, not for independent use by children.</p>
-
-<h2>Medical note</h2>
-<p>Puhinka is a journal and a guide — not a medical device and not medical advice;
-decisions about a child's health belong to the parents and their doctor.</p>
-
-<h2>Contact</h2>
-<p>Privacy questions: <a href="mailto:puhinka.app@gmail.com">puhinka.app@gmail.com</a></p>
+  <footer>
+    <p><a href="privacy.html" lang="bg">Политика за поверителност</a><a href="privacy.html#en" lang="en">Privacy policy</a>
+       <a href="terms.html" lang="bg">Условия за ползване</a><a href="terms.html#en" lang="en">Terms of use</a>
+       <a href="mailto:puhinka.app@gmail.com">puhinka.app@gmail.com</a></p>
+    <p>© 2026 Stiliyan Dimitrov</p>
+  </footer>
 </div>
+<script>
+(function () {
+  var root = document.documentElement, buttons = document.querySelectorAll('[data-set]');
+  function set(lang) {
+    root.setAttribute('data-lang', lang); root.setAttribute('lang', lang);
+    for (var i = 0; i < buttons.length; i++) buttons[i].setAttribute('aria-pressed', String(buttons[i].getAttribute('data-set') === lang));
+    try { localStorage.setItem('puhinka-lang', lang); } catch (e) {}
+  }
+  var saved = null;
+  try { saved = localStorage.getItem('puhinka-lang'); } catch (e) {}
+  set(saved || ((navigator.language || 'bg').toLowerCase().indexOf('bg') === 0 ? 'bg' : 'en'));
+  for (var i = 0; i < buttons.length; i++) buttons[i].addEventListener('click', function () { set(this.getAttribute('data-set')); });
+})();
+</script>
 </body>
 </html>
