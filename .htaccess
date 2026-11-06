@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# Всичко на https и винаги с www (един 301 редирект, без вериги)
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^ https://www.puhinka.com%{REQUEST_URI} [L,R=301]
+
+# /index.html и /en/index.html -> чистите адреси
+RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html[\s?] [NC]
+RewriteRule ^(.*/)?index\.html$ https://www.puhinka.com/$1 [R=301,L]
