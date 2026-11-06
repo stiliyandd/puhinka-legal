@@ -1,5 +1,10 @@
 RewriteEngine On
 
+# app.puhinka.com живее в подпапка app/ на този сайт (Hostinger) - да не се пренасочва към www.
+# Папката има собствен .htaccess; това е предпазна мрежа, ако той още го няма.
+RewriteCond %{HTTP_HOST} ^app\.puhinka\.com$ [NC]
+RewriteRule ^ - [L]
+
 # Всичко на https и винаги с www (един 301 редирект, без вериги)
 RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} !^www\. [NC]
