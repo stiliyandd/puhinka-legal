@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Puhinka - breastfeeding timer and baby journal</title>
+<meta name="description" content="Puhinka: a breastfeeding timer and baby journal for Android. No accounts, no servers, no ads: everything stays on your phone.">
+<link rel="canonical" href="https://www.puhinka.com/en/">
+<link rel="alternate" hreflang="bg" href="https://www.puhinka.com/">
+<link rel="alternate" hreflang="en" href="https://www.puhinka.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://www.puhinka.com/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Puhinka - breastfeeding timer and baby journal">
+<meta property="og:description" content="No accounts, no servers, no ads: everything stays on your phone.">
+<meta property="og:image" content="https://www.puhinka.com/logo.png">
+<meta property="og:url" content="https://www.puhinka.com/en/">
+<link rel="icon" href="../logo.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "MobileApplication", "name": "Puhinka", "operatingSystem": "Android", "applicationCategory": "LifestyleApplication", "inLanguage": "en", "description": "Puhinka: a breastfeeding timer and baby journal for Android. No accounts, no servers, no ads: everything stays on your phone.", "url": "https://www.puhinka.com/en/", "image": "https://www.puhinka.com/logo.png", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "author": {"@type": "Person", "name": "Stiliyan Dimitrov"}}</script>
+<style>
+  @font-face { font-family:"Nunito"; font-weight:400; font-display:swap; src:url(../fonts/Nunito_400Regular.ttf) format("truetype"); }
+  @font-face { font-family:"Nunito"; font-weight:800; font-display:swap; src:url(../fonts/Nunito_800ExtraBold.ttf) format("truetype"); }
+  @font-face { font-family:"Nunito"; font-weight:900; font-display:swap; src:url(../fonts/Nunito_900Black.ttf) format("truetype"); }
+  :root { --bg:#FBF4F6; --ink:#3A1B2A; --muted:#7A5565; --berry:#9C2C63; --deep:#6E1F47; --line:#EBD7E0;
+          --mint:#D4F0E1; --amber:#FFE9B8; --left:#5DB98C; --right:#E9A92C; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:"Nunito",ui-rounded,system-ui,sans-serif; font-size:17px; line-height:1.6; color:var(--ink); background:var(--bg); }
+  .wrap { max-width:960px; margin:0 auto; padding:0 20px; }
+  a { color:var(--berry); }
+  .i { width:1em; height:1em; fill:currentColor; flex:none; }
+  header { display:flex; justify-content:flex-end; padding-top:16px; }
+  .lang a { text-decoration:none; display:inline-block; line-height:1.4; border:1px solid var(--line); background:#fff; color:var(--ink); padding:6px 14px; font:inherit; font-size:14px; font-weight:800; cursor:pointer; }
+  .lang a:first-child { border-radius:999px 0 0 999px; } .lang a:last-child { border-radius:0 999px 999px 0; border-left:0; }
+  .lang a[aria-current="true"] { background:var(--berry); color:#fff; border-color:var(--berry); }
+  a:focus-visible, .track:focus-visible { outline:3px solid var(--berry); outline-offset:3px; }
+
+  .hero { text-align:center; padding:24px 0 36px; }
+  .hero img { width:136px; height:136px; border-radius:32px; box-shadow:0 10px 30px rgba(156,44,99,.28); }
+  h1 { font-size:clamp(40px,8vw,64px); font-weight:900; line-height:1.05; margin:20px 0 10px; }
+  .lead { font-size:clamp(18px,3vw,22px); color:var(--muted); max-width:560px; margin:0 auto; }
+  .cta { display:inline-block; margin-top:24px; padding:13px 26px; border-radius:999px; background:var(--berry); color:#fff; font-weight:800; }
+
+  .stickers { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:16px; margin:8px 0 0; }
+  .sticker { border-radius:26px; padding:18px 20px; }
+  .sticker:nth-child(1) { background:var(--mint); transform:rotate(-1.4deg); }
+  .sticker:nth-child(2) { background:var(--amber); transform:rotate(1deg); }
+  .sticker:nth-child(3) { background:#E6DAFA; transform:rotate(-.8deg); }
+  .sticker h3 { margin:0 0 4px; font-size:20px; font-weight:900; display:flex; align-items:center; gap:8px; }
+  .sticker h3 .i { font-size:24px; color:var(--berry); }
+  .sticker p { margin:0; font-size:15px; color:#5b3a4a; }
+
+  .row { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; margin:72px 0; }
+  .row:nth-of-type(even) .stage { order:2; }
+  .stage { min-height:300px; border-radius:46% 54% 50% 50% / 54% 46% 54% 46%; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:18px; padding:32px 24px; }
+  .row:nth-of-type(even) .stage { border-radius:54% 46% 48% 52% / 46% 54% 46% 54%; }
+  .badge-ico { display:inline-flex; width:46px; height:46px; align-items:center; justify-content:center; border-radius:16px; background:var(--berry); color:#fff; font-size:26px; }
+  .copy .head { display:flex; align-items:center; gap:14px; margin:0 0 12px; }
+  .copy h2 { font-size:clamp(26px,4vw,38px); font-weight:900; line-height:1.1; margin:0; }
+  .badge-ico { flex:none; }
+  .copy p { margin:0 0 16px; color:var(--muted); max-width:46ch; }
+  .chips { display:flex; flex-wrap:wrap; gap:8px; }
+  .chip { background:#fff; border:2px solid var(--line); padding:5px 13px; border-radius:999px; font-size:14.5px; font-weight:800; color:var(--deep); }
+
+  .v-timers { display:flex; gap:18px; }
+  .timer { width:128px; height:128px; border-radius:50%; color:#fff; display:flex; flex-direction:column; align-items:center; justify-content:center; box-shadow:0 8px 20px rgba(0,0,0,.12); }
+  .timer.l { background:var(--left); } .timer.r { background:var(--right); }
+  .timer b { font-size:32px; font-weight:900; line-height:1; } .timer span { font-size:18px; font-weight:800; opacity:.95; }
+  .v-pill { display:inline-flex; align-items:center; gap:8px; background:#fff; border-radius:999px; padding:9px 18px; font-weight:800; box-shadow:0 4px 14px rgba(0,0,0,.08); }
+  .v-pill .i { font-size:20px; color:var(--right); }
+  .v-chat { display:flex; flex-direction:column; gap:10px; width:100%; max-width:300px; }
+  .bub { padding:11px 16px; border-radius:20px; font-weight:800; font-size:15.5px; box-shadow:0 4px 12px rgba(0,0,0,.07); }
+  .bub.me { align-self:flex-end; background:var(--berry); color:#fff; border-bottom-right-radius:6px; }
+  .bub.bot { align-self:flex-start; background:#fff; border-bottom-left-radius:6px; display:flex; gap:10px; align-items:center; }
+  .bub.bot .i { font-size:26px; color:var(--berry); }
+  .v-day { display:grid; grid-template-columns:repeat(2,1fr); gap:16px 20px; }
+  .day-dot { width:104px; height:104px; border-radius:50%; background:var(--d); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px; box-shadow:0 6px 16px rgba(0,0,0,.08); }
+  .day-dot .i { font-size:34px; color:var(--berry); } .day-dot small { font-weight:800; font-size:14px; color:var(--deep); }
+  .v-chart { width:100%; max-width:300px; background:#fff; border-radius:24px; padding:10px; box-shadow:0 6px 18px rgba(0,0,0,.08); }
+  .v-cards { display:flex; flex-direction:column; gap:14px; }
+  .mini { display:flex; align-items:center; gap:14px; background:#fff; border-radius:22px; padding:14px 22px; box-shadow:0 6px 16px rgba(0,0,0,.08); min-width:230px; }
+  .mini .i.big { font-size:34px; color:var(--berry); } .mini b { display:block; font-size:19px; font-weight:900; line-height:1.2; } .mini small { color:var(--muted); font-weight:700; }
+  .v-kicks { background:#fff; border-radius:30px; padding:18px 34px; text-align:center; box-shadow:0 6px 18px rgba(0,0,0,.08); }
+  .v-kicks b { display:block; font-size:72px; font-weight:900; line-height:1; color:var(--berry); } .v-kicks span { font-weight:800; color:var(--muted); }
+
+  .center { text-align:center; }
+  .shots { margin:72px 0; }
+  .shots h2 { font-size:clamp(28px,4.4vw,40px); font-weight:900; margin:0 0 22px; }
+  .track { display:flex; gap:18px; overflow-x:auto; scroll-snap-type:x mandatory; padding:6px 4px 20px; -webkit-overflow-scrolling:touch; }
+  .phone { margin:0; flex:none; width:min(250px,66vw); scroll-snap-align:center; border-radius:34px; border:7px solid var(--ink); background:var(--ink); overflow:hidden; box-shadow:0 12px 30px rgba(58,27,42,.25); }
+  .phone img { display:block; width:100%; height:auto; }
+
+  .premium { background:linear-gradient(150deg,#A8326C 0%,#6E1F47 100%); color:#fff; border-radius:36px; padding:40px 28px; margin:72px 0 24px; }
+  .premium h2 { font-size:clamp(30px,5vw,44px); font-weight:900; margin:0 0 8px; }
+  .premium .sub { margin:0 0 30px; color:rgba(255,255,255,.88); max-width:52ch; }
+  .p-row { display:grid; grid-template-columns:auto 1fr auto; gap:16px 18px; align-items:start; padding:20px 0; border-top:2px dashed rgba(255,255,255,.25); }
+  .p-ico { display:flex; width:54px; height:54px; border-radius:18px; background:rgba(255,255,255,.18); align-items:center; justify-content:center; font-size:30px; }
+  .p-row h3 { margin:2px 0 4px; font-size:22px; font-weight:900; }
+  .p-row p { margin:0 0 10px; color:rgba(255,255,255,.85); font-size:15.5px; max-width:52ch; }
+  .chip.on-dark { background:rgba(255,255,255,.14); border-color:rgba(255,255,255,.3); color:#fff; font-size:13.5px; }
+  .p-lock { display:inline-flex; align-items:center; gap:5px; font-size:13px; font-weight:800; background:#fff; color:var(--deep); border-radius:999px; padding:4px 11px; }
+  .p-lock .i { font-size:15px; }
+  .tickets { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; margin-top:30px; }
+  .ticket { background:#fff; color:var(--ink); border-radius:26px; padding:20px 22px; position:relative; }
+  .ticket h4 { margin:0 0 4px; font-size:21px; font-weight:900; color:var(--berry); }
+  .ticket p { margin:0; color:var(--muted); font-size:15px; }
+  .ribbon { position:absolute; top:-12px; right:16px; background:var(--amber); color:var(--deep); font-weight:900; font-size:13px; padding:4px 12px; border-radius:999px; }
+  .fine { margin:16px 0 0; font-size:13.5px; color:rgba(255,255,255,.8); }
+
+  .free { margin:48px 0 0; text-align:center; }
+  .free h2 { font-size:clamp(26px,4vw,36px); font-weight:900; margin:0 0 6px; }
+  .free p { margin:0 0 18px; color:var(--muted); }
+  .free .chips { justify-content:center; }
+  .free .chip { background:var(--mint); border-color:transparent; display:inline-flex; align-items:center; gap:6px; color:#1f5a3f; }
+  .free .chip .i { font-size:16px; }
+  .disclaimer { margin:40px auto 0; max-width:640px; text-align:center; font-size:14px; color:var(--muted); }
+  footer { margin:44px 0 0; padding:24px 0 48px; border-top:2px solid var(--line); text-align:center; color:var(--muted); font-size:14px; }
+  footer a { margin:0 10px; }
+
+  @media (max-width:760px) {
+    .row { grid-template-columns:1fr; gap:24px; margin:56px 0; }
+    .row:nth-of-type(even) .stage { order:0; }
+    .stage { min-height:260px; }
+    .p-row { grid-template-columns:auto 1fr; }
+    .p-lock { grid-column:2; justify-self:start; }
+    .premium { padding:30px 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="lang" role="navigation" aria-label="Език / Language">
+      <a href="https://www.puhinka.com/" hreflang="bg" lang="bg">BG</a><a href="https://www.puhinka.com/en/" hreflang="en" lang="en" aria-current="true">EN</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <img src="../logo.png" alt="Puhinka" width="136" height="136">
+    <h1>Puhinka</h1>
+    <p class="lead">A breastfeeding timer and baby journal made for 2 a.m. Everything stays on your phone.</p>
+    <span class="cta">Coming soon to Google Play</span>
+  </section>
+
+  <section class="stickers">
+    <div class="sticker"><h3><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12,17C10.89,17 10,16.1 10,15C10,13.89 10.89,13 12,13A2,2 0 0,1 14,15A2,2 0 0,1 12,17M18,20V10H6V20H18M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6C4.89,22 4,21.1 4,20V10C4,8.89 4.89,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z"/></svg> No accounts</h3><p>No sign-up. Your records live only on your phone and are never sent anywhere.</p></div>
+    <div class="sticker"><h3><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.8 22.6L17.15 20H6.5Q4.2 20 2.6 18.4T1 14.5Q1 12.58 2.19 11.08 3.38 9.57 5.25 9.15 5.33 8.95 5.4 8.76 5.5 8.57 5.55 8.35L1.4 4.2L2.8 2.8L21.2 21.2M6.5 18H15.15L7.1 9.95Q7.05 10.23 7.03 10.5 7 10.73 7 11H6.5Q5.05 11 4.03 12.03 3 13.05 3 14.5 3 15.95 4.03 17 5.05 18 6.5 18M11.13 14M21.6 18.75L20.15 17.35Q20.58 17 20.79 16.54 21 16.08 21 15.5 21 14.45 20.27 13.73 19.55 13 18.5 13H17V11Q17 8.93 15.54 7.46 14.08 6 12 6 11.33 6 10.7 6.16 10.07 6.33 9.5 6.68L8.05 5.23Q8.93 4.63 9.91 4.31 10.9 4 12 4 14.93 4 16.96 6.04 19 8.07 19 11 20.73 11.2 21.86 12.5 23 13.78 23 15.5 23 16.5 22.63 17.31 22.25 18.15 21.6 18.75M14.83 12.03Z"/></svg> No servers</h3><p>Works fully offline, even at 3 a.m. with no signal.</p></div>
+    <div class="sticker"><h3><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C17.5 2 22 6.5 22 12S17.5 22 12 22 2 17.5 2 12 6.5 2 12 2M12 4C10.1 4 8.4 4.6 7.1 5.7L18.3 16.9C19.3 15.5 20 13.8 20 12C20 7.6 16.4 4 12 4M16.9 18.3L5.7 7.1C4.6 8.4 4 10.1 4 12C4 16.4 7.6 20 12 20C13.9 20 15.6 19.4 16.9 18.3Z"/></svg> No ads</h3><p>No ads, no tracking, no third-party analytics.</p></div>
+  </section>
+
+  <article class="row">
+    <div class="stage" style="background:linear-gradient(135deg,#D4F0E1 50%,#FFE9B8 50%)"><div class="v-timers">
+        <div class="timer l"><b>L</b><span>07:42</span></div>
+        <div class="timer r"><b>R</b><span>00:00</span></div>
+      </div>
+      <div class="v-pill"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"/></svg>Next up: Right</div></div>
+    <div class="copy">
+      <div class="head"><span class="badge-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12,2A3,3 0 0,1 15,5A3,3 0 0,1 12,8A3,3 0 0,1 9,5A3,3 0 0,1 12,2M20,18L18,12.56C17.65,11.57 17.34,10.71 16,10C14.62,9.3 13.62,9 12,9C10.37,9 9.38,9.3 8,10C6.66,10.71 6.35,11.57 6,12.56L4,18C3.68,19.35 6.36,20.44 8.11,21.19V19C8.11,18.05 8.97,17.38 10.69,16.97C10.85,16.93 11,16.91 11.12,16.89C10.58,16.07 10.36,15.34 10.34,15.28L12.11,14.68C12.12,14.7 12.63,16.27 13.84,17.06C14.05,17.13 14.26,17.21 14.46,17.3C15.23,17.64 15.69,18.08 15.84,18.61C14.5,19.14 13.22,19.41 12,19.41L11,19.31V21.94L12,22C13.37,22 14.67,21.72 15.89,21.19C17.64,20.44 20.25,19.13 20,18M15.5,17A1.5,1.5 0 0,1 14,15.5A1.5,1.5 0 0,1 15.5,14A1.5,1.5 0 0,1 17,15.5A1.5,1.5 0 0,1 15.5,17Z"/></svg></span><h2>One hand, one tap</h2></div>
+      <p>Start the left or right timer with one tap. Puhinka remembers which side is next and how long it has been since the last feeding.</p>
+      <div class="chips"><span class="chip">Bottle</span><span class="chip">Pumping</span><span class="chip">Alarm-volume reminders</span><span class="chip">Widget</span></div>
+    </div>
+  </article>
+  <article class="row">
+    <div class="stage" style="background:#E6DAFA"><div class="v-chat">
+        <div class="bub me">When did she last eat?</div>
+        <div class="bub bot"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M15.75 19.13C14.92 19.13 14.25 18.29 14.25 17.25C14.25 16.22 14.92 15.38 15.75 15.38C16.58 15.38 17.25 16.22 17.25 17.25C17.25 18.29 16.58 19.13 15.75 19.13M12 11.25C10.76 11.25 9.75 10.41 9.75 9.38C9.75 8.34 10.76 7.5 12 7.5C13.24 7.5 14.25 8.34 14.25 9.38C14.25 10.41 13.24 11.25 12 11.25M8.25 19.13C7.42 19.13 6.75 18.29 6.75 17.25C6.75 16.22 7.42 15.38 8.25 15.38C9.08 15.38 9.75 16.22 9.75 17.25C9.75 18.29 9.08 19.13 8.25 19.13M12 8.25C12.41 8.25 12.75 8.59 12.75 9C12.75 9.41 12.41 9.75 12 9.75C11.59 9.75 11.25 9.41 11.25 9C11.25 8.59 11.59 8.25 12 8.25M18.75 12C18.43 12 18.12 12.07 17.84 12.2C17.36 11.59 16.71 11.07 15.93 10.67C16.5 9.87 16.84 8.9 16.84 7.85C16.84 7.83 16.84 7.81 16.84 7.79C17.93 7.56 18.75 6.59 18.75 5.42C18.75 4.09 17.66 3 16.33 3C15.64 3 15 3.29 14.58 3.75C13.83 3.28 12.95 3 12 3C11.05 3 10.16 3.28 9.42 3.75C9 3.29 8.36 3 7.67 3C6.34 3 5.25 4.09 5.25 5.42C5.25 6.58 6.07 7.55 7.15 7.79C7.15 7.81 7.15 7.83 7.15 7.85C7.15 8.9 7.5 9.88 8.06 10.67C7.29 11.07 6.64 11.59 6.16 12.2C5.88 12.07 5.57 12 5.25 12C4 12 3 13 3 14.25C3 15.5 4 16.5 5.25 16.5C5.27 16.5 5.29 16.5 5.31 16.5C5.27 16.74 5.25 17 5.25 17.25C5.25 19.32 6.59 21 8.25 21C9.26 21 10.15 20.37 10.7 19.41C11.12 19.47 11.55 19.5 12 19.5C12.45 19.5 12.88 19.47 13.3 19.41C13.85 20.37 14.74 21 15.75 21C17.41 21 18.75 19.32 18.75 17.25C18.75 17 18.73 16.74 18.69 16.5C18.71 16.5 18.73 16.5 18.75 16.5C20 16.5 21 15.5 21 14.25C21 13 20 12 18.75 12"/></svg><span>1 h 52 min ago · Left · 7 min</span></div>
+        <div class="bub me">Today’s summary</div>
+      </div></div>
+    <div class="copy">
+      <div class="head"><span class="badge-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M15.75 19.13C14.92 19.13 14.25 18.29 14.25 17.25C14.25 16.22 14.92 15.38 15.75 15.38C16.58 15.38 17.25 16.22 17.25 17.25C17.25 18.29 16.58 19.13 15.75 19.13M12 11.25C10.76 11.25 9.75 10.41 9.75 9.38C9.75 8.34 10.76 7.5 12 7.5C13.24 7.5 14.25 8.34 14.25 9.38C14.25 10.41 13.24 11.25 12 11.25M8.25 19.13C7.42 19.13 6.75 18.29 6.75 17.25C6.75 16.22 7.42 15.38 8.25 15.38C9.08 15.38 9.75 16.22 9.75 17.25C9.75 18.29 9.08 19.13 8.25 19.13M12 8.25C12.41 8.25 12.75 8.59 12.75 9C12.75 9.41 12.41 9.75 12 9.75C11.59 9.75 11.25 9.41 11.25 9C11.25 8.59 11.59 8.25 12 8.25M18.75 12C18.43 12 18.12 12.07 17.84 12.2C17.36 11.59 16.71 11.07 15.93 10.67C16.5 9.87 16.84 8.9 16.84 7.85C16.84 7.83 16.84 7.81 16.84 7.79C17.93 7.56 18.75 6.59 18.75 5.42C18.75 4.09 17.66 3 16.33 3C15.64 3 15 3.29 14.58 3.75C13.83 3.28 12.95 3 12 3C11.05 3 10.16 3.28 9.42 3.75C9 3.29 8.36 3 7.67 3C6.34 3 5.25 4.09 5.25 5.42C5.25 6.58 6.07 7.55 7.15 7.79C7.15 7.81 7.15 7.83 7.15 7.85C7.15 8.9 7.5 9.88 8.06 10.67C7.29 11.07 6.64 11.59 6.16 12.2C5.88 12.07 5.57 12 5.25 12C4 12 3 13 3 14.25C3 15.5 4 16.5 5.25 16.5C5.27 16.5 5.29 16.5 5.31 16.5C5.27 16.74 5.25 17 5.25 17.25C5.25 19.32 6.59 21 8.25 21C9.26 21 10.15 20.37 10.7 19.41C11.12 19.47 11.55 19.5 12 19.5C12.45 19.5 12.88 19.47 13.3 19.41C13.85 20.37 14.74 21 15.75 21C17.41 21 18.75 19.32 18.75 17.25C18.75 17 18.73 16.74 18.69 16.5C18.71 16.5 18.73 16.5 18.75 16.5C20 16.5 21 15.5 21 14.25C21 13 20 12 18.75 12"/></svg></span><h2>Just ask Mecho</h2></div>
+      <p>Mecho answers from your own records, offline, with no digging through the journal.</p>
+      <div class="chips"><span class="chip">When did she last eat?</span><span class="chip">What’s the percentile?</span><span class="chip">Today’s summary</span></div>
+    </div>
+  </article>
+  <article class="row">
+    <div class="stage" style="background:#D3E8FA"><div class="v-day">
+        <div class="day-dot" style="--d:#E6DAFA"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M23,12H17V10L20.39,6H17V4H23V6L19.62,10H23V12M15,16H9V14L12.39,10H9V8H15V10L11.62,14H15V16M7,20H1V18L4.39,14H1V12H7V14L3.62,18H7V20Z"/></svg><small>02:10</small></div>
+        <div class="day-dot" style="--d:#D3E8FA"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 6.08C5.72 6.12 5 6.62 4.72 7.4L3 12.13V22H7V12.84L8.42 8.94L10.7 10H14V8H11.15L7.29 6.2C7.03 6.11 6.76 6.07 6.5 6.08M9 17H21V19H9M10 3.5A2 2 0 0 1 8 5.5A2 2 0 0 1 6 3.5A2 2 0 0 1 8 1.5A2 2 0 0 1 10 3.5M21 14.5A1.5 1.5 0 0 1 19.5 16A1.5 1.5 0 0 1 18 14.5A1.5 1.5 0 0 1 19.5 13A1.5 1.5 0 0 1 21 14.5M9 11V13H11V14C11 15.11 11.89 16 13 16H15C16.11 16 17 15.11 17 14V11H15V13H13V12A1 1 0 0 0 12 11Z"/></svg><small>02:40</small></div>
+        <div class="day-dot" style="--d:#FFE9B8"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.28 2.8L10.78 3.3C9.44 2.55 7.84 2.4 6.41 2.87L6.33 2.8C5.36 1.82 3.77 1.82 2.8 2.8S1.82 5.36 2.8 6.33L2.87 6.41C2.4 7.84 2.55 9.44 3.3 10.78L2.8 11.28C2.21 11.87 2.21 12.81 2.8 13.4L4.21 14.82C4.8 15.4 5.74 15.4 6.33 14.82L6.68 14.46L13.76 21.53C14.34 22.12 15.29 22.12 15.88 21.53L21.53 15.88C22.12 15.29 22.12 14.34 21.53 13.75L14.46 6.68L14.82 6.33C15.4 5.74 15.4 4.8 14.82 4.21L13.4 2.79C12.82 2.21 11.87 2.21 11.28 2.8M4.25 7.05C4.33 6.71 4.47 6.38 4.66 6.07L3.86 5.27C3.75 5.16 3.67 5.04 3.63 4.9C3.5 4.56 3.57 4.14 3.86 3.86S4.56 3.5 4.9 3.63C5.04 3.67 5.16 3.75 5.27 3.86L6.07 4.66C6.38 4.47 6.71 4.33 7.05 4.25C7.91 4 8.83 4.06 9.65 4.42L4.42 9.65C4.06 8.83 4 7.91 4.25 7.05M20.47 14.82L14.82 20.47L7.75 13.4L13.4 7.75L20.47 14.82M13.76 5.27L5.27 13.76L3.86 12.34L12.34 3.86L13.76 5.27M14.82 11.63L11.63 14.82L10.57 13.76L13.76 10.57L14.82 11.63M16.94 13.76L13.76 16.94L12.69 15.88L15.88 12.69L16.94 13.76Z"/></svg><small>03:15</small></div>
+        <div class="day-dot" style="--d:#FFD9E6"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20,10C18.58,7.57 15.5,6.69 13,8V3H11V8C8.5,6.69 5.42,7.57 4,10C2,13 7,22 9,22C11,22 11,21 12,21C13,21 13,22 15,22C17,22 22,13 20,10M18.25,13.38C17.63,15.85 16.41,18.12 14.7,20C14.5,20 14.27,19.9 14.1,19.75C12.87,18.76 11.13,18.76 9.9,19.75C9.73,19.9 9.5,20 9.3,20C7.59,18.13 6.36,15.85 5.75,13.39C5.5,12.66 5.45,11.87 5.66,11.12C6.24,10.09 7.32,9.43 8.5,9.4C9.06,9.41 9.61,9.54 10.11,9.79L11,10.24H13L13.89,9.79C14.39,9.54 14.94,9.41 15.5,9.4C16.68,9.43 17.76,10.08 18.34,11.11C18.55,11.86 18.5,12.65 18.25,13.38M11,5C5.38,8.07 4.11,3.78 4.11,3.78C4.11,3.78 6.77,0.19 11,5Z"/></svg><small>12:30</small></div>
+      </div></div>
+    <div class="copy">
+      <div class="head"><span class="badge-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M23,12H17V10L20.39,6H17V4H23V6L19.62,10H23V12M15,16H9V14L12.39,10H9V8H15V10L11.62,14H15V16M7,20H1V18L4.39,14H1V12H7V14L3.62,18H7V20Z"/></svg></span><h2>From sleep to the first apple</h2></div>
+      <p>Sleep, diapers, tummy time and solids with a verified list of first foods and allergens. A daily “Routine” checklist with age-based suggestions.</p>
+      <div class="chips"><span class="chip">Sleep</span><span class="chip">Diapers</span><span class="chip">Tummy time</span><span class="chip">Solids</span><span class="chip">Routine</span></div>
+    </div>
+  </article>
+  <article class="row">
+    <div class="stage" style="background:#FFD9E6"><svg class="v-chart" viewBox="0 0 300 190" role="img" aria-label="WHO">
+        <g fill="none" stroke-linecap="round">
+          <path d="M20 22V160H284" stroke="#9C2C63" stroke-opacity=".25" stroke-width="2"/>
+          <path d="M24 148C90 104 160 70 280 42" stroke="#9C2C63" stroke-opacity=".35" stroke-width="3"/>
+          <path d="M24 156C92 124 162 98 280 76" stroke="#9C2C63" stroke-width="5"/>
+          <path d="M24 162C94 146 166 130 280 112" stroke="#9C2C63" stroke-opacity=".35" stroke-width="3"/>
+        </g>
+        <circle cx="196" cy="100" r="11" fill="#fff" stroke="#9C2C63" stroke-width="5"/>
+      </svg></div>
+    <div class="copy">
+      <div class="head"><span class="badge-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M16,11.78L20.24,4.45L21.97,5.45L16.74,14.5L10.23,10.75L5.46,19H22V21H2V3H4V17.54L9.5,8L16,11.78Z"/></svg></span><h2>Growing, and you can see it</h2></div>
+      <p>Weight and height on the real WHO curves, developmental milestones, the baby-teeth map and the growth-spurt calendar.</p>
+      <div class="chips"><span class="chip">WHO curves</span><span class="chip">Milestones</span><span class="chip">Teeth</span><span class="chip">Growth spurts</span><span class="chip">Week-by-week articles</span></div>
+    </div>
+  </article>
+  <article class="row">
+    <div class="stage" style="background:#FFE0D0"><div class="v-cards">
+        <div class="mini"><svg class="i big" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.15,15.18L9.73,13.77L11.15,12.35L12.56,13.77L13.97,12.35L12.56,10.94L13.97,9.53L15.39,10.94L16.8,9.53L13.97,6.7L6.9,13.77L9.73,16.6L11.15,15.18M3.08,19L6.2,15.89L4.08,13.77L13.97,3.87L16.1,6L17.5,4.58L16.1,3.16L17.5,1.75L21.75,6L20.34,7.4L18.92,6L17.5,7.4L19.63,9.53L9.73,19.42L7.61,17.3L3.08,21.84V19Z"/></svg><div><b>Vaccine</b><small>In 3 days</small></div></div>
+        <div class="mini"><svg class="i big" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 13V5A3 3 0 0 0 9 5V13A5 5 0 1 0 15 13M12 4A1 1 0 0 1 13 5V8H11V5A1 1 0 0 1 12 4Z"/></svg><div><b>37,2 °C</b><small>Temperature</small></div></div>
+      </div></div>
+    <div class="copy">
+      <div class="head"><span class="badge-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.15,15.18L9.73,13.77L11.15,12.35L12.56,13.77L13.97,12.35L12.56,10.94L13.97,9.53L15.39,10.94L16.8,9.53L13.97,6.7L6.9,13.77L9.73,16.6L11.15,15.18M3.08,19L6.2,15.89L4.08,13.77L13.97,3.87L16.1,6L17.5,4.58L16.1,3.16L17.5,1.75L21.75,6L20.34,7.4L18.92,6L17.5,7.4L19.63,9.53L9.73,19.42L7.61,17.3L3.08,21.84V19Z"/></svg></span><h2>Vaccines, with a reminder</h2></div>
+      <p>The Bulgarian vaccination schedule with reminders, doctor visits with “questions for the doctor”, medicines and a temperature log.</p>
+      <div class="chips"><span class="chip">Vaccinations</span><span class="chip">Doctor visits</span><span class="chip">Medicines</span><span class="chip">Temperature</span></div>
+    </div>
+  </article>
+  <article class="row">
+    <div class="stage" style="background:#D4F0E1"><div class="v-kicks"><b>12</b><span>kicks today</span></div>
+      <div class="v-pill"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9,4C9,2.89 9.89,2 11,2C12.11,2 13,2.89 13,4C13,5.11 12.11,6 11,6C9.89,6 9,5.11 9,4M16,13C16,11.66 15.17,10.5 14,10A3,3 0 0,0 11,7A3,3 0 0,0 8,10V17H10V22H13V17H16V13Z"/></svg>Week 32</div></div>
+    <div class="copy">
+      <div class="head"><span class="badge-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9,4C9,2.89 9.89,2 11,2C12.11,2 13,2.89 13,4C13,5.11 12.11,6 11,6C9.89,6 9,5.11 9,4M16,13C16,11.66 15.17,10.5 14,10A3,3 0 0,0 11,7A3,3 0 0,0 8,10V17H10V22H13V17H16V13Z"/></svg></span><h2>Even before the baby</h2></div>
+      <p>Due date and gestational week, a contraction timer, a kick counter and a hospital bag list.</p>
+      <div class="chips"><span class="chip">Contractions</span><span class="chip">Kicks</span><span class="chip">Hospital bag</span></div>
+    </div>
+  </article>
+
+  <section class="shots" aria-label="Screenshots">
+    <h2 class="center">See it inside</h2>
+    <div class="track" tabindex="0"><figure class="phone"><img src="../shots/01-kurmene.jpg" alt="A Puhinka screen" width="500" height="1000" loading="lazy"></figure><figure class="phone"><img src="../shots/02-dnevnik.jpg" alt="A Puhinka screen" width="500" height="1000" loading="lazy"></figure><figure class="phone"><img src="../shots/03-statistika.jpg" alt="A Puhinka screen" width="500" height="1000" loading="lazy"></figure><figure class="phone"><img src="../shots/04-rastezh.jpg" alt="A Puhinka screen" width="500" height="1000" loading="lazy"></figure><figure class="phone"><img src="../shots/05-uidzhet.jpg" alt="A Puhinka screen" width="500" height="1000" loading="lazy"></figure><figure class="phone"><img src="../shots/06-sledene.jpg" alt="A Puhinka screen" width="500" height="1000" loading="lazy"></figure><figure class="phone"><img src="../shots/07-etapi.jpg" alt="A Puhinka screen" width="500" height="1000" loading="lazy"></figure><figure class="phone"><img src="../shots/08-mecho.jpg" alt="A Puhinka screen" width="500" height="1000" loading="lazy"></figure></div>
+  </section>
+
+  <section class="premium">
+    <h2>Premium</h2>
+    <p class="sub">The essentials stay free forever. Premium is for parents who want the full picture of their baby.</p>
+      <div class="p-row">
+        <span class="p-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M16,11.78L20.24,4.45L21.97,5.45L16.74,14.5L10.23,10.75L5.46,19H22V21H2V3H4V17.54L9.5,8L16,11.78Z"/></svg></span>
+        <div><h3>Growth and development</h3><p>Growth on the WHO curves, the teeth map, growth spurts and tummy time.</p><div class="chips"><span class="chip on-dark">Growth</span><span class="chip on-dark">Teeth</span><span class="chip on-dark">Spurts</span><span class="chip on-dark">Tummy time</span></div></div>
+        <span class="p-lock"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12,17C10.89,17 10,16.1 10,15C10,13.89 10.89,13 12,13A2,2 0 0,1 14,15A2,2 0 0,1 12,17M18,20V10H6V20H18M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6C4.89,22 4,21.1 4,20V10C4,8.89 4.89,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z"/></svg>Premium</span>
+      </div>
+      <div class="p-row">
+        <span class="p-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M19,8C19.56,8 20,8.43 20,9A1,1 0 0,1 19,10C18.43,10 18,9.55 18,9C18,8.43 18.43,8 19,8M2,2V11C2,13.96 4.19,16.5 7.14,16.91C7.76,19.92 10.42,22 13.5,22A6.5,6.5 0 0,0 20,15.5V11.81C21.16,11.39 22,10.29 22,9A3,3 0 0,0 19,6A3,3 0 0,0 16,9C16,10.29 16.84,11.4 18,11.81V15.41C18,17.91 16,19.91 13.5,19.91C11.5,19.91 9.82,18.7 9.22,16.9C12,16.3 14,13.8 14,11V2H10V5H12V11A4,4 0 0,1 8,15A4,4 0 0,1 4,11V5H6V2H2Z"/></svg></span>
+        <div><h3>Health and doctor</h3><p>Vaccines with reminders, visits, medicines and a PDF report you take to the pediatrician.</p><div class="chips"><span class="chip on-dark">Vaccines</span><span class="chip on-dark">Visits</span><span class="chip on-dark">Medicines</span><span class="chip on-dark">PDF report</span></div></div>
+        <span class="p-lock"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12,17C10.89,17 10,16.1 10,15C10,13.89 10.89,13 12,13A2,2 0 0,1 14,15A2,2 0 0,1 12,17M18,20V10H6V20H18M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6C4.89,22 4,21.1 4,20V10C4,8.89 4.89,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z"/></svg>Premium</span>
+      </div>
+      <div class="p-row">
+        <span class="p-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M19,3H14.82C14.4,1.84 13.3,1 12,1C10.7,1 9.6,1.84 9.18,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M12,3A1,1 0 0,1 13,4A1,1 0 0,1 12,5A1,1 0 0,1 11,4A1,1 0 0,1 12,3M7,7H17V5H19V19H5V5H7V7M7.5,13.5L9,12L11,14L15.5,9.5L17,11L11,17L7.5,13.5Z"/></svg></span>
+        <div><h3>Daily life under control</h3><p>A daily routine with age-based suggestions, a milk stash and statistics beyond 7 days.</p><div class="chips"><span class="chip on-dark">Routine</span><span class="chip on-dark">Milk stash</span><span class="chip on-dark">Stats beyond 7 days</span></div></div>
+        <span class="p-lock"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12,17C10.89,17 10,16.1 10,15C10,13.89 10.89,13 12,13A2,2 0 0,1 14,15A2,2 0 0,1 12,17M18,20V10H6V20H18M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6C4.89,22 4,21.1 4,20V10C4,8.89 4.89,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z"/></svg>Premium</span>
+      </div>
+      <div class="p-row">
+        <span class="p-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M15.75 19.13C14.92 19.13 14.25 18.29 14.25 17.25C14.25 16.22 14.92 15.38 15.75 15.38C16.58 15.38 17.25 16.22 17.25 17.25C17.25 18.29 16.58 19.13 15.75 19.13M12 11.25C10.76 11.25 9.75 10.41 9.75 9.38C9.75 8.34 10.76 7.5 12 7.5C13.24 7.5 14.25 8.34 14.25 9.38C14.25 10.41 13.24 11.25 12 11.25M8.25 19.13C7.42 19.13 6.75 18.29 6.75 17.25C6.75 16.22 7.42 15.38 8.25 15.38C9.08 15.38 9.75 16.22 9.75 17.25C9.75 18.29 9.08 19.13 8.25 19.13M12 8.25C12.41 8.25 12.75 8.59 12.75 9C12.75 9.41 12.41 9.75 12 9.75C11.59 9.75 11.25 9.41 11.25 9C11.25 8.59 11.59 8.25 12 8.25M18.75 12C18.43 12 18.12 12.07 17.84 12.2C17.36 11.59 16.71 11.07 15.93 10.67C16.5 9.87 16.84 8.9 16.84 7.85C16.84 7.83 16.84 7.81 16.84 7.79C17.93 7.56 18.75 6.59 18.75 5.42C18.75 4.09 17.66 3 16.33 3C15.64 3 15 3.29 14.58 3.75C13.83 3.28 12.95 3 12 3C11.05 3 10.16 3.28 9.42 3.75C9 3.29 8.36 3 7.67 3C6.34 3 5.25 4.09 5.25 5.42C5.25 6.58 6.07 7.55 7.15 7.79C7.15 7.81 7.15 7.83 7.15 7.85C7.15 8.9 7.5 9.88 8.06 10.67C7.29 11.07 6.64 11.59 6.16 12.2C5.88 12.07 5.57 12 5.25 12C4 12 3 13 3 14.25C3 15.5 4 16.5 5.25 16.5C5.27 16.5 5.29 16.5 5.31 16.5C5.27 16.74 5.25 17 5.25 17.25C5.25 19.32 6.59 21 8.25 21C9.26 21 10.15 20.37 10.7 19.41C11.12 19.47 11.55 19.5 12 19.5C12.45 19.5 12.88 19.47 13.3 19.41C13.85 20.37 14.74 21 15.75 21C17.41 21 18.75 19.32 18.75 17.25C18.75 17 18.73 16.74 18.69 16.5C18.71 16.5 18.73 16.5 18.75 16.5C20 16.5 21 15.5 21 14.25C21 13 20 12 18.75 12"/></svg></span>
+        <div><h3>Mecho and articles</h3><p>The offline helper and week-by-week articles for every age.</p><div class="chips"><span class="chip on-dark">Mecho</span><span class="chip on-dark">Articles</span><span class="chip on-dark">Week by week</span></div></div>
+        <span class="p-lock"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12,17C10.89,17 10,16.1 10,15C10,13.89 10.89,13 12,13A2,2 0 0,1 14,15A2,2 0 0,1 12,17M18,20V10H6V20H18M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6C4.89,22 4,21.1 4,20V10C4,8.89 4.89,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z"/></svg>Premium</span>
+      </div>
+      <div class="p-row">
+        <span class="p-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9,4C9,2.89 9.89,2 11,2C12.11,2 13,2.89 13,4C13,5.11 12.11,6 11,6C9.89,6 9,5.11 9,4M16,13C16,11.66 15.17,10.5 14,10A3,3 0 0,0 11,7A3,3 0 0,0 8,10V17H10V22H13V17H16V13Z"/></svg></span>
+        <div><h3>Pregnancy, unlimited</h3><p>Detailed content, the full history of kicks and contractions and a pregnancy food guide.</p><div class="chips"><span class="chip on-dark">Detailed content</span><span class="chip on-dark">Full history</span><span class="chip on-dark">Foods</span></div></div>
+        <span class="p-lock"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12,17C10.89,17 10,16.1 10,15C10,13.89 10.89,13 12,13A2,2 0 0,1 14,15A2,2 0 0,1 12,17M18,20V10H6V20H18M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6C4.89,22 4,21.1 4,20V10C4,8.89 4.89,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z"/></svg>Premium</span>
+      </div>
+      <div class="p-row">
+        <span class="p-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.07 10.41A5 5 0 0 0 13.07 4.59A3.39 3.39 0 0 1 15 4A3.5 3.5 0 0 1 15 11A3.39 3.39 0 0 1 13.07 10.41M5.5 7.5A3.5 3.5 0 1 1 9 11A3.5 3.5 0 0 1 5.5 7.5M7.5 7.5A1.5 1.5 0 1 0 9 6A1.5 1.5 0 0 0 7.5 7.5M16 17V19H2V17S2 13 9 13 16 17 16 17M14 17C13.86 16.22 12.67 15 9 15S4.07 16.31 4 17M15.95 13A5.32 5.32 0 0 1 18 17V19H22V17S22 13.37 15.94 13Z"/></svg></span>
+        <div><h3>The whole family</h3><p>Several children in one app: twins or a second baby.</p><div class="chips"><span class="chip on-dark">Multiple children</span></div></div>
+        <span class="p-lock"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12,17C10.89,17 10,16.1 10,15C10,13.89 10.89,13 12,13A2,2 0 0,1 14,15A2,2 0 0,1 12,17M18,20V10H6V20H18M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6C4.89,22 4,21.1 4,20V10C4,8.89 4.89,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z"/></svg>Premium</span>
+      </div>
+    <div class="tickets">
+      <div class="ticket"><span class="ribbon">7 days free</span><h4>Monthly</h4><p>Pay month by month and stop whenever you like.</p></div>
+      <div class="ticket"><span class="ribbon">7 days free</span><h4>Yearly</h4><p>One payment for the whole year.</p></div>
+      <div class="ticket"><h4>Lifetime</h4><p>One-time, no renewal.</p></div>
+    </div>
+    <p class="fine">The free trial is for new subscribers when Google Play offers it. You see the prices in Google Play before you confirm, and a subscription can be cancelled at any time.</p>
+  </section>
+
+  <section class="free">
+    <h2>Free forever</h2>
+    <p>Logging and exporting your data are never locked.</p>
+    <div class="chips"><span class="chip"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/></svg>Nursing timers</span><span class="chip"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/></svg>Journal and manual entries</span><span class="chip"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/></svg>Bottle and pumping</span><span class="chip"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/></svg>Sleep</span><span class="chip"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/></svg>Diapers</span><span class="chip"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/></svg>Temperature</span><span class="chip"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/></svg>7-day statistics</span><span class="chip"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/></svg>Export and import</span><span class="chip"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/></svg>Automatic backup</span><span class="chip"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/></svg>Widget</span><span class="chip"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/></svg>Contractions</span><span class="chip"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/></svg>Kicks</span><span class="chip"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/></svg>Hospital bag</span></div>
+  </section>
+
+  <p class="disclaimer">Puhinka is a journal and a guide, not a medical device, and does not replace a doctor. Health content relies on verified sources: WHO, CDC, AAP, NHS, the Bulgarian National Centre of Public Health and Bulgarian regulations.</p>
+
+  <footer>
+    <p><a href="../privacy.html#en">Privacy policy</a><a href="../terms.html#en">Terms of use</a><a href="mailto:puhinka.app@gmail.com">puhinka.app@gmail.com</a></p>
+    <p>© 2026 Stiliyan Dimitrov</p>
+  </footer>
+</div>
+</body>
+</html>
