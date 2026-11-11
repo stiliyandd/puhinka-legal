@@ -102,16 +102,19 @@
   .phone { margin:0; flex:none; width:min(250px,66vw); scroll-snap-align:center; border-radius:34px; border:7px solid var(--ink); background:var(--ink); overflow:hidden; box-shadow:0 12px 30px rgba(58,27,42,.25); }
   .phone img { display:block; width:100%; height:auto; }
 
+  .features { background:linear-gradient(150deg,#A8326C 0%,#6E1F47 100%); color:#fff; border-radius:36px; padding:40px 28px; margin:72px 0 24px; }
+  .features h2 { font-size:clamp(30px,5vw,44px); font-weight:900; margin:0 0 8px; }
+  .features .sub { margin:0 0 30px; color:rgba(255,255,255,.88); max-width:52ch; }
+  .p-row { display:grid; grid-template-columns:auto 1fr; gap:16px 18px; align-items:start; padding:20px 0; border-top:2px dashed rgba(255,255,255,.25); }
+  .p-ico { display:flex; width:54px; height:54px; border-radius:18px; background:rgba(255,255,255,.18); align-items:center; justify-content:center; font-size:30px; }
+  .p-row h3 { margin:2px 0 4px; font-size:22px; font-weight:900; }
+  .p-row p { margin:0 0 10px; color:rgba(255,255,255,.85); font-size:15.5px; max-width:52ch; }
+  .chip.on-dark { background:rgba(255,255,255,.14); border-color:rgba(255,255,255,.3); color:#fff; font-size:13.5px; }
+
   .feedback { margin:56px auto 0; max-width:560px; text-align:center; }
   .feedback h2 { font-size:clamp(26px,4vw,36px); font-weight:900; margin:0 0 8px; }
   .feedback p { margin:0; color:var(--muted); }
 
-  .free { margin:48px 0 0; text-align:center; }
-  .free h2 { font-size:clamp(26px,4vw,36px); font-weight:900; margin:0 0 6px; }
-  .free p { margin:0 0 18px; color:var(--muted); }
-  .free .chips { justify-content:center; }
-  .free .chip { background:var(--mint); border-color:transparent; display:inline-flex; align-items:center; gap:6px; color:#1f5a3f; }
-  .free .chip .i { font-size:16px; }
   .disclaimer { margin:40px auto 0; max-width:640px; text-align:center; font-size:14px; color:var(--muted); }
   footer { margin:44px 0 0; padding:24px 0 48px; border-top:2px solid var(--line); text-align:center; color:var(--muted); font-size:14px; }
   footer a { margin:0 10px; }
@@ -120,6 +123,7 @@
     .row { grid-template-columns:1fr; gap:24px; margin:56px 0; }
     .row:nth-of-type(even) .stage { order:0; }
     .stage { min-height:260px; }
+  .features { padding:30px 20px; }
   }
 </style>
 </head>
@@ -214,10 +218,45 @@
     <div class="track" tabindex="0"><figure class="phone"><img src="../shots/01-kurmene.jpg" alt="A Puhinka screen" width="500" height="1000" loading="lazy"></figure><figure class="phone"><img src="../shots/02-dnevnik.jpg" alt="A Puhinka screen" width="500" height="1000" loading="lazy"></figure><figure class="phone"><img src="../shots/03-statistika.jpg" alt="A Puhinka screen" width="500" height="1000" loading="lazy"></figure><figure class="phone"><img src="../shots/04-rastezh.jpg" alt="A Puhinka screen" width="500" height="1000" loading="lazy"></figure><figure class="phone"><img src="../shots/06-sledene.jpg" alt="A Puhinka screen" width="500" height="1000" loading="lazy"></figure><figure class="phone"><img src="../shots/07-etapi.jpg" alt="A Puhinka screen" width="500" height="1000" loading="lazy"></figure><figure class="phone"><img src="../shots/08-mecho.jpg" alt="A Puhinka screen" width="500" height="1000" loading="lazy"></figure></div>
   </section>
 
-  <section class="free">
+  <section class="features">
     <h2>Free</h2>
-    <p>Every feature is unlocked, with no payment and no account.</p>
-    <div class="chips"><span class="chip"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/></svg>Nursing timers</span><span class="chip"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/></svg>Journal and manual entries</span><span class="chip"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/></svg>Bottle and pumping</span><span class="chip"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/></svg>Sleep</span><span class="chip"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/></svg>Diapers</span><span class="chip"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/></svg>Statistics</span><span class="chip"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/></svg>Export and import</span><span class="chip"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/></svg>Data backup</span></div>
+    <p class="sub">Every feature is unlocked, with no payment and no account.</p>
+      <div class="p-row">
+        <span class="p-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12,2A3,3 0 0,1 15,5A3,3 0 0,1 12,8A3,3 0 0,1 9,5A3,3 0 0,1 12,2M20,18L18,12.56C17.65,11.57 17.34,10.71 16,10C14.62,9.3 13.62,9 12,9C10.37,9 9.38,9.3 8,10C6.66,10.71 6.35,11.57 6,12.56L4,18C3.68,19.35 6.36,20.44 8.11,21.19V19C8.11,18.05 8.97,17.38 10.69,16.97C10.85,16.93 11,16.91 11.12,16.89C10.58,16.07 10.36,15.34 10.34,15.28L12.11,14.68C12.12,14.7 12.63,16.27 13.84,17.06C14.05,17.13 14.26,17.21 14.46,17.3C15.23,17.64 15.69,18.08 15.84,18.61C14.5,19.14 13.22,19.41 12,19.41L11,19.31V21.94L12,22C13.37,22 14.67,21.72 15.89,21.19C17.64,20.44 20.25,19.13 20,18M15.5,17A1.5,1.5 0 0,1 14,15.5A1.5,1.5 0 0,1 15.5,14A1.5,1.5 0 0,1 17,15.5A1.5,1.5 0 0,1 15.5,17Z"/></svg></span>
+        <div><h3>Nursing, bottle and pumping</h3><p>A left and right timer with one tap, bottle, pumping and manual entries.</p><div class="chips"><span class="chip on-dark">Timers</span><span class="chip on-dark">Bottle</span><span class="chip on-dark">Pumping</span><span class="chip on-dark">Journal</span></div></div>
+      </div>
+      <div class="p-row">
+        <span class="p-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M23,12H17V10L20.39,6H17V4H23V6L19.62,10H23V12M15,16H9V14L12.39,10H9V8H15V10L11.62,14H15V16M7,20H1V18L4.39,14H1V12H7V14L3.62,18H7V20Z"/></svg></span>
+        <div><h3>Sleep and diapers</h3><p>When baby sleeps, when the last diaper was changed and how many wet ones today.</p><div class="chips"><span class="chip on-dark">Sleep</span><span class="chip on-dark">Diapers</span></div></div>
+      </div>
+      <div class="p-row">
+        <span class="p-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M16,11.78L20.24,4.45L21.97,5.45L16.74,14.5L10.23,10.75L5.46,19H22V21H2V3H4V17.54L9.5,8L16,11.78Z"/></svg></span>
+        <div><h3>Statistics without limits</h3><p>Statistics for any period, observations from your records and a PDF report you can share.</p><div class="chips"><span class="chip on-dark">Statistics</span><span class="chip on-dark">Observations</span><span class="chip on-dark">PDF report</span></div></div>
+      </div>
+      <div class="p-row">
+        <span class="p-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5,4A5.5,5.5 0 0,0 2,9.5C2,10 2.09,10.5 2.22,11H6.3L7.57,7.63C7.87,6.83 9.05,6.75 9.43,7.63L11.5,13L12.09,11.58C12.22,11.25 12.57,11 13,11H21.78C21.91,10.5 22,10 22,9.5A5.5,5.5 0 0,0 16.5,4C14.64,4 13,4.93 12,6.34C11,4.93 9.36,4 7.5,4V4M3,12.5A1,1 0 0,0 2,13.5A1,1 0 0,0 3,14.5H5.44L11,20C12,20.9 12,20.9 13,20L18.56,14.5H21A1,1 0 0,0 22,13.5A1,1 0 0,0 21,12.5H13.4L12.47,14.8C12.07,15.81 10.92,15.67 10.55,14.83L8.5,9.5L7.54,11.83C7.39,12.21 7.05,12.5 6.6,12.5H3Z"/></svg></span>
+        <div><h3>Growth and health</h3><p>Weight and height with WHO curves, vaccines by the immunisation schedule, medicines and visits.</p><div class="chips"><span class="chip on-dark">Growth</span><span class="chip on-dark">Vaccines</span><span class="chip on-dark">Medicines</span><span class="chip on-dark">Visits</span></div></div>
+      </div>
+      <div class="p-row">
+        <span class="p-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7,2C4,2 2,5 2,8C2,10.11 3,13 4,14C5,15 6,22 8,22C12.54,22 10,15 12,15C14,15 11.46,22 16,22C18,22 19,15 20,14C21,13 22,10.11 22,8C22,5 20,2 17,2C14,2 14,3 12,3C10,3 10,2 7,2M7,4C9,4 10,5 12,5C14,5 15,4 17,4C18.67,4 20,6 20,8C20,9.75 19.14,12.11 18.19,13.06C17.33,13.92 16.06,19.94 15.5,19.94C15.29,19.94 15,18.88 15,17.59C15,15.55 14.43,13 12,13C9.57,13 9,15.55 9,17.59C9,18.88 8.71,19.94 8.5,19.94C7.94,19.94 6.67,13.92 5.81,13.06C4.86,12.11 4,9.75 4,8C4,6 5.33,4 7,4Z"/></svg></span>
+        <div><h3>The teeth chart</h3><p>All 20 baby teeth with the date each came in and notes.</p><div class="chips"><span class="chip on-dark">Teeth</span></div></div>
+      </div>
+      <div class="p-row">
+        <span class="p-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M19,3H14.82C14.4,1.84 13.3,1 12,1C10.7,1 9.6,1.84 9.18,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M12,3A1,1 0 0,1 13,4A1,1 0 0,1 12,5A1,1 0 0,1 11,4A1,1 0 0,1 12,3M7,7H17V5H19V19H5V5H7V7M7.5,13.5L9,12L11,14L15.5,9.5L17,11L11,17L7.5,13.5Z"/></svg></span>
+        <div><h3>Daily life under control</h3><p>A daily routine, a milk stash and tummy time in one place.</p><div class="chips"><span class="chip on-dark">Routine</span><span class="chip on-dark">Milk stash</span><span class="chip on-dark">Tummy time</span></div></div>
+      </div>
+      <div class="p-row">
+        <span class="p-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M15.75 19.13C14.92 19.13 14.25 18.29 14.25 17.25C14.25 16.22 14.92 15.38 15.75 15.38C16.58 15.38 17.25 16.22 17.25 17.25C17.25 18.29 16.58 19.13 15.75 19.13M12 11.25C10.76 11.25 9.75 10.41 9.75 9.38C9.75 8.34 10.76 7.5 12 7.5C13.24 7.5 14.25 8.34 14.25 9.38C14.25 10.41 13.24 11.25 12 11.25M8.25 19.13C7.42 19.13 6.75 18.29 6.75 17.25C6.75 16.22 7.42 15.38 8.25 15.38C9.08 15.38 9.75 16.22 9.75 17.25C9.75 18.29 9.08 19.13 8.25 19.13M12 8.25C12.41 8.25 12.75 8.59 12.75 9C12.75 9.41 12.41 9.75 12 9.75C11.59 9.75 11.25 9.41 11.25 9C11.25 8.59 11.59 8.25 12 8.25M18.75 12C18.43 12 18.12 12.07 17.84 12.2C17.36 11.59 16.71 11.07 15.93 10.67C16.5 9.87 16.84 8.9 16.84 7.85C16.84 7.83 16.84 7.81 16.84 7.79C17.93 7.56 18.75 6.59 18.75 5.42C18.75 4.09 17.66 3 16.33 3C15.64 3 15 3.29 14.58 3.75C13.83 3.28 12.95 3 12 3C11.05 3 10.16 3.28 9.42 3.75C9 3.29 8.36 3 7.67 3C6.34 3 5.25 4.09 5.25 5.42C5.25 6.58 6.07 7.55 7.15 7.79C7.15 7.81 7.15 7.83 7.15 7.85C7.15 8.9 7.5 9.88 8.06 10.67C7.29 11.07 6.64 11.59 6.16 12.2C5.88 12.07 5.57 12 5.25 12C4 12 3 13 3 14.25C3 15.5 4 16.5 5.25 16.5C5.27 16.5 5.29 16.5 5.31 16.5C5.27 16.74 5.25 17 5.25 17.25C5.25 19.32 6.59 21 8.25 21C9.26 21 10.15 20.37 10.7 19.41C11.12 19.47 11.55 19.5 12 19.5C12.45 19.5 12.88 19.47 13.3 19.41C13.85 20.37 14.74 21 15.75 21C17.41 21 18.75 19.32 18.75 17.25C18.75 17 18.73 16.74 18.69 16.5C18.71 16.5 18.73 16.5 18.75 16.5C20 16.5 21 15.5 21 14.25C21 13 20 12 18.75 12"/></svg></span>
+        <div><h3>Mecho</h3><p>The helper that answers from your own records.</p><div class="chips"><span class="chip on-dark">Mecho</span></div></div>
+      </div>
+      <div class="p-row">
+        <span class="p-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.07 10.41A5 5 0 0 0 13.07 4.59A3.39 3.39 0 0 1 15 4A3.5 3.5 0 0 1 15 11A3.39 3.39 0 0 1 13.07 10.41M5.5 7.5A3.5 3.5 0 1 1 9 11A3.5 3.5 0 0 1 5.5 7.5M7.5 7.5A1.5 1.5 0 1 0 9 6A1.5 1.5 0 0 0 7.5 7.5M16 17V19H2V17S2 13 9 13 16 17 16 17M14 17C13.86 16.22 12.67 15 9 15S4.07 16.31 4 17M15.95 13A5.32 5.32 0 0 1 18 17V19H22V17S22 13.37 15.94 13Z"/></svg></span>
+        <div><h3>The whole family</h3><p>Several children in one app: twins or a second baby.</p><div class="chips"><span class="chip on-dark">Multiple children</span></div></div>
+      </div>
+      <div class="p-row">
+        <span class="p-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M10,21H14A2,2 0 0,1 12,23A2,2 0 0,1 10,21M21,19V20H3V19L5,17V11C5,7.9 7.03,5.17 10,4.29C10,4.19 10,4.1 10,4A2,2 0 0,1 12,2A2,2 0 0,1 14,4C14,4.1 14,4.19 14,4.29C16.97,5.17 19,7.9 19,11V17L21,19M17,11A5,5 0 0,0 12,6A5,5 0 0,0 7,11V18H17V11M19.75,3.19L18.33,4.61C20.04,6.3 21,8.6 21,11H23C23,8.07 21.84,5.25 19.75,3.19M1,11H3C3,8.6 3.96,6.3 5.67,4.61L4.25,3.19C2.16,5.25 1,8.07 1,11Z"/></svg></span>
+        <div><h3>Your data and reminders</h3><p>Export and import, a full backup of your data and reminders whenever you want them.</p><div class="chips"><span class="chip on-dark">Export</span><span class="chip on-dark">Backup</span><span class="chip on-dark">Reminders</span></div></div>
+      </div>
   </section>
 
   <section class="feedback">
