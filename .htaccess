@@ -25,7 +25,7 @@ AddCharset utf-8 .md .txt
 
 <IfModule mod_headers.c>
 <FilesMatch "\.(html|md)$">
-  Header set Link "</llms.txt>; rel=\"describedby\"; type=\"text/plain\""
+  Header set Link "</llms.txt>; rel=describedby"
   Header append Vary Accept
 </FilesMatch>
 # Markdown отговорът е на същия адрес като HTML-а: CDN-ът не бива да го кешира, иначе браузър би получил Markdown.
