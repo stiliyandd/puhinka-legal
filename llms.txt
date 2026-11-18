@@ -1,0 +1,20 @@
+# Puhinka (Пухинка)
+
+> Puhinka is a free breastfeeding timer and baby journal for iPhone, Android and the browser. It works as an installable web app at https://app.puhinka.com/, with no account and no ads; all records stay on the user's own device. It is a journal and a guide, not a medical device. Main language: Bulgarian, also available in English.
+
+What it does: breastfeeding timer (left/right side, suggests the next side), bottle and pumping log, sleep, diapers, growth and other baby records, statistics, optional feeding reminders (the only feature that uses a server), and a local helper that answers questions from the user's own records. It works offline.
+
+## Main pages
+
+- [Puhinka - home (Bulgarian)](https://www.puhinka.com/): what the app does and how to start
+- [Puhinka - home (English)](https://www.puhinka.com/en/): the same in English
+- [Open the app](https://app.puhinka.com/): the web app itself, installable on the home screen
+
+## Legal
+
+- [Privacy policy](https://www.puhinka.com/privacy.html): what data is stored where (on the device; reminders only with consent)
+- [Terms of use](https://www.puhinka.com/terms.html)
+
+## Contact
+
+- Email: puhinka.app@gmail.com

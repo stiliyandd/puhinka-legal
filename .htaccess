@@ -13,3 +13,23 @@ RewriteRule ^ https://www.puhinka.com%{REQUEST_URI} [L,R=301]
 # /index.html и /en/index.html -> чистите адреси
 RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html[\s?] [NC]
 RewriteRule ^(.*/)?index\.html$ https://www.puhinka.com/$1 [R=301,L]
+
+# Агенти, които искат Markdown (Accept: text/markdown), получават кратката версия.
+RewriteCond %{HTTP_ACCEPT} text/markdown [NC]
+RewriteRule ^$ index.md [L]
+RewriteCond %{HTTP_ACCEPT} text/markdown [NC]
+RewriteRule ^en/?$ en.md [L]
+
+AddType text/markdown .md
+AddCharset utf-8 .md .txt
+
+<IfModule mod_headers.c>
+<FilesMatch "\.(html|md)$">
+  Header set Link "</llms.txt>; rel=\"describedby\"; type=\"text/plain\""
+  Header append Vary Accept
+</FilesMatch>
+# Markdown отговорът е на същия адрес като HTML-а: CDN-ът не бива да го кешира, иначе браузър би получил Markdown.
+<FilesMatch "\.md$">
+  Header set Cache-Control "private, no-store"
+</FilesMatch>
+</IfModule>
