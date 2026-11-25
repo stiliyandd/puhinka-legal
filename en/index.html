@@ -296,6 +296,16 @@
   </footer>
 </div>
 <script>
+  // Споделен линк (?ref=<канал>): етикетът на канала се пренася към бутоните „Отвори“, за да знаем кое споделяне работи.
+  // Само познат етикет от списъка (същият е в src/lib/share-link.ts и public/api/ping.php); без бисквитки и идентификатори.
+  (function () {
+    var m = /[?&]ref=([a-z]{2,3})(?:&|$)/.exec(location.search);
+    if (!m || ['wk', 'ft', 'ms', 'fr', 'fb', 'ig', 'grp', 'ob', 'art'].indexOf(m[1]) < 0) return;
+    var links = document.querySelectorAll('a[href^="https://app.puhinka.com/"]');
+    for (var i = 0; i < links.length; i++) {
+      links[i].href += (links[i].href.indexOf('?') < 0 ? '?' : '&') + 'ref=' + m[1];
+    }
+  })();
   // Лента с бутон „Отвори" - показва се, щом основният бутон излезе от екрана.
   (function () {
     var bar = document.getElementById('topbar'), cta = document.querySelector('.hero .cta');
